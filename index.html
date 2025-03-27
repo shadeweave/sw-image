@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>sw-image Demo</title>
+
+	<script src="./sw-image.js"></script>
+
+	<style>
+		:root {
+			--sw-body-font-family: ui-serif, system-ui, sans-serif;
+			--sw-font-family-monospace: ui-monospace, monospace;
+			--sw-body-font-size: 1rem;
+			--sw-body-font-weight: 400;
+			--sw-body-line-height: 1.5;
+			--sw-code-color: rgb(195.175, 43.475, 43.475);
+			--sw-code-bg: inherit;
+			--sw-body-color: rgb(27.6, 36, 40);
+			--sw-body-color-rgb: 27.6, 36, 40;
+			--sw-body-bg: #fff;
+			--sw-body-bg-rgb: 255, 255, 255;
+			--sw-heading-color: inherit;
+			--sw-link-color: #0055e9;
+			--sw-link-color-rgb: 0, 85, 233;
+		}
+
+		body {
+			margin: 0;
+			padding: 1rem;
+			font-family: var(--sw-body-font-family);
+			font-size: var(--sw-body-font-size);
+			font-weight: var(--sw-body-font-weight);
+			line-height: var(--sw-body-line-height);
+			color: var(--sw-body-color);
+			text-align: var(--sw-body-text-align);
+			background-color: var(--sw-body-bg);
+			-webkit-text-size-adjust: 100%;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+
+		h6,
+		h5,
+		h4,
+		h3,
+		h2,
+		h1 {
+			margin-block: 0 0.5rem;
+			font-weight: 600;
+			line-height: 1.25;
+			color: var(--sw-heading-color);
+			text-wrap: balance;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		h3 {
+			font-size: 1.75rem;
+		}
+
+		h4 {
+			font-size: 1.5rem;
+		}
+
+		h5 {
+			font-size: 1.25rem;
+		}
+
+		h6 {
+			font-size: 1rem;
+		}
+
+		p {
+			margin-block: 0 1rem;
+			text-wrap: pretty;
+		}
+
+		pre,
+		code,
+		kbd,
+		samp {
+			font-family: var(--sw-font-family-monospace);
+			font-size: 1em;
+		}
+
+		pre {
+			margin-block: 0 1rem;
+			overflow: auto;
+			font-size: 0.875em;
+		}
+
+		pre code {
+			font-size: inherit;
+			color: inherit;
+			word-break: normal;
+		}
+
+		code {
+			font-size: 0.875em;
+			color: var(--sw-code-color);
+			word-wrap: break-word;
+			background-color: var(--sw-code-bg);
+		}
+
+		a>code {
+			color: inherit;
+		}
+	</style>
+</head>
+
+<body>
+	<h1><code>&lt;sw-image&gt;</code> Demo</h1>
+
+	Somewhat overengineered web component to create image placeholders. Find the <a href="https://github.com/shadeweave/sw-image">source code on GitHub</a>.
+
+	<h2>Default</h2>
+	<p>
+		<code>&lt;sw-image&gt;&lt;/sw-image&gt;</code>
+		<sw-image></sw-image>
+	</p>
+
+	<h2>Custom size</h2>
+	<p>
+		<code>&lt;sw-image width="200" height="200"&gt;&lt;/sw-image&gt;</code>
+		<sw-image width="200" height="200"></sw-image>
+	</p>
+
+	<h2>Responsive images</h2>
+	<p>
+		Shown inside 200px by 200px div containers.
+	</p>
+	<div style="margin: 0 0 1rem;">
+		<code>&lt;sw-image fluid&gt;&lt;/sw-image&gt;</code>
+		<div style="width: 200px; height: 200px; margin: 0 0 1rem; border: 1px solid red"><sw-image fluid></sw-image></div>
+	</div>
+
+	<div style="margin: 0 0 1rem;">
+		<code>&lt;sw-image fluid width="960" height="540"&gt;&lt;/sw-image&gt;</code>
+		<div style="width: 200px; height: 200px; border: 1px solid red"><sw-image fluid width="960" height="540"></sw-image></div>
+	</div>
+
+	<h2>Custom Text</h2>
+	<p>
+		<code>&lt;sw-image text="Lorem ipsum" width="200"&gt;&lt;/sw-image&gt;</code>
+		<sw-image text="Custom text" width="200"></sw-image>
+	</p>
+	<p>
+		<code>&lt;sw-image text="Some long amount of text to see what happens" width="200"&gt;&lt;/sw-image&gt;</code>
+		<sw-image text="Some long amount of text to see what happens" width="200"></sw-image>
+	</p>
+
+	<h2>Color</h2>
+	<p>
+		<code>&lt;sw-image bg-color="#009" text-color="#fff" width="200"&gt;&lt;/sw-image&gt;</code>
+		<sw-image bg-color="#009" text-color="#fff" width="200"></sw-image>
+	</p>
+	<p>
+		<code>&lt;sw-image bg-color="#a0a" text-color="#fff" width="200"&gt;&lt;/sw-image&gt;</code>
+		<sw-image bg-color="#a0a" text-color="#fff" width="200"></sw-image>
+	</p>
+
+	<h2>Inside an anchor</h2>
+	<p>
+		<code>&lt;a href="..."&gt;&lt;sw-image text="Lorem ipsum" width="200" height="200"&gt;&lt;/sw-image&gt;&lt;/a&gt;</code>
+		<a href="#"><sw-image img text="Go to the GitHub Repository" width="200"></sw-image></a>
+	</p>
+</body>
+
+</html>
