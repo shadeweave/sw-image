@@ -66,7 +66,7 @@ class swImage extends HTMLElement {
 		});
 
 		this.config.title = this.encodeString(this.getAttribute('title') === '' ? '' : this.config.title);
-		this.config.text = this.getAttribute('text') ? this.encodeString(this.getAttribute('text')) : `${this.config.width}&times;${this.config.height}`;
+		this.config.text = this.encodeString(this.getAttribute('text') || `${this.config.width}×${this.config.height}`);
 	}
 
 	escapeQuotes(item) {
