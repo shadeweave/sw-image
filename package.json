@@ -1,6 +1,6 @@
 {
   "name": "@shadeweave/sw-image",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Image placeholder web component",
   "main": "sw-image.js",
   "scripts": {
