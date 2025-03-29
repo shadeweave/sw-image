@@ -1,5 +1,6 @@
 class swImage extends HTMLElement {
 	static defaults = {
+		'class': null,
 		'width': '100%',
 		'height': '160',
 		'bg-color': '#dadef0',
@@ -92,6 +93,7 @@ class swImage extends HTMLElement {
 				? config.title + (settings.showText ? ` : ${config.text}` : '')
 				: config.text
 			: null;
+		settings.classAttr = config['class'] && this.hasAttribute('replace') ? ` class="${config['class']}"` : '';
 		settings.ariaAttr = settings.ariaLabel ? ` role="img" aria-label="${settings.ariaLabel}"` : ' aria-hidden="true"';
 		settings.altAttr = settings.showTitle || settings.showText ? ` alt="${config.title} : ${config.text}"` : ' aria-hidden="true"';
 		settings.titleAttr = settings.showTitle ? ` title="${config.title}"` : '';
@@ -103,7 +105,7 @@ class swImage extends HTMLElement {
 		const config = this.config;
 		const settings = this.settings;
 
-		const svg = `<svg width="${config.width}" height="${config.height}"${settings.ariaAttr} xmlns="http://www.w3.org/2000/svg" style="-webkit-user-select: none; -moz-user-select: none; user-select: none; text-anchor: middle;" preserveAspectRatio="xMidYMid slice">
+		const svg = `<svg width="${config.width}" height="${config.height}"${settings.classAttr}${settings.ariaAttr} xmlns="http://www.w3.org/2000/svg" style="-webkit-user-select: none; -moz-user-select: none; user-select: none; text-anchor: middle;" preserveAspectRatio="xMidYMid slice">
 			${settings.showTitle ? settings.showTitle : ''}
 			<rect fill="${config.bgColor}" width="100%" height="100%"/>
 			${settings.showText ? settings.showText : ''}
@@ -123,7 +125,7 @@ class swImage extends HTMLElement {
 		const config = this.config;
 		const settings = this.settings;
 
-		const img = `<img width="${config.width}" height="${config.height}"${settings.altAttr}${settings.titleAttr} src="${this.dataUri()} "/>`;
+		const img = `<img width="${config.width}" height="${config.height}"${settings.classAttr}${settings.altAttr}${settings.titleAttr} src="${this.dataUri()} "/>`;
 		return img;
 	}
 

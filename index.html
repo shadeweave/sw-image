@@ -114,6 +114,11 @@
 		a>code {
 			color: inherit;
 		}
+
+		.img-fluid {
+			max-inline-size: 100%;
+			height: auto;
+		}
 	</style>
 </head>
 
@@ -200,8 +205,16 @@
 	<p>
 		<code>&lt;sw-image replace img text="I am replaced with an &amp;lt;img&amp;gt; element"&gt;&lt;/sw-image&gt;</code>
 		<br>
-		<sw-image replace img text="I am replaced with an &lt;img&gt; element"></sw-image>
+		<sw-image replace img></sw-image>
 	</p>
+	<div style="margin: 0 0 1rem;">
+		<code>&lt;sw-image fluid width="960" height="540" class="img-fluid"&gt;&lt;/sw-image&gt;</code>
+		<div style="width: 200px; height: 200px; border: 1px solid red"><sw-image replace width="960" height="540" class="img-fluid"></sw-image></div>
+	</div>
+	<div style="margin: 0 0 1rem;">
+		<code>&lt;sw-image fluid width="960" height="540" class="img-fluid"&gt;&lt;/sw-image&gt;</code>
+		<div style="width: 200px; height: 200px; border: 1px solid red"><sw-image replace img width="960" height="540" class="img-fluid"></sw-image></div>
+	</div>
 </body>
 
 </html>
