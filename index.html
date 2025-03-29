@@ -125,12 +125,14 @@
 	<h2>Default</h2>
 	<p>
 		<code>&lt;sw-image&gt;&lt;/sw-image&gt;</code>
+		<br>
 		<sw-image></sw-image>
 	</p>
 
 	<h2>Custom size</h2>
 	<p>
 		<code>&lt;sw-image width="200" height="200"&gt;&lt;/sw-image&gt;</code>
+		<br>
 		<sw-image width="200" height="200"></sw-image>
 	</p>
 
@@ -150,28 +152,55 @@
 
 	<h2>Custom Text</h2>
 	<p>
-		<code>&lt;sw-image text="Lorem ipsum" width="200"&gt;&lt;/sw-image&gt;</code>
+		<code>&lt;sw-image text="Custom text" width="200"&gt;&lt;/sw-image&gt;</code>
+		<br>
 		<sw-image text="Custom text" width="200"></sw-image>
 	</p>
 	<p>
 		<code>&lt;sw-image text="Some long amount of text to see what happens" width="200"&gt;&lt;/sw-image&gt;</code>
+		<br>
 		<sw-image text="Some long amount of text to see what happens" width="200"></sw-image>
 	</p>
 
 	<h2>Color</h2>
 	<p>
 		<code>&lt;sw-image bg-color="#009" text-color="#fff" width="200"&gt;&lt;/sw-image&gt;</code>
+		<br>
 		<sw-image bg-color="#009" text-color="#fff" width="200"></sw-image>
 	</p>
 	<p>
 		<code>&lt;sw-image bg-color="#a0a" text-color="#fff" width="200"&gt;&lt;/sw-image&gt;</code>
+		<br>
 		<sw-image bg-color="#a0a" text-color="#fff" width="200"></sw-image>
 	</p>
 
 	<h2>Inside an anchor</h2>
 	<p>
-		<code>&lt;a href="..."&gt;&lt;sw-image text="Lorem ipsum" width="200" height="200"&gt;&lt;/sw-image&gt;&lt;/a&gt;</code>
-		<a href="#"><sw-image img text="Go to the GitHub Repository" width="200"></sw-image></a>
+		<code>&lt;a href="..."&gt;&lt;sw-image text="Go to the GitHub Repository" width="200"&gt;&lt;/sw-image&gt;&lt;/a&gt;</code>
+		<br>
+		<a href="#"><sw-image text="Go to the GitHub Repository" width="200"></sw-image></a>
+	</p>
+
+	<h2>As an <code>img</code> element</h2>
+	<p>
+		<code>&lt;sw-image text="I am an &amp;lt;img&amp;gt; element" width="200"&gt;&lt;/sw-image&gt;</code>
+		<br>
+		<sw-image img text="I am an &lt;img&gt; element" width="200"></sw-image>
+	</p>
+
+	<h2>Replaced element</h2>
+	<p>
+		Replace the <code>&lt;sw-image&gt;</code> element with an image. Output can be SVG or <code>&lt;img&gt;</code>.
+	</p>
+	<p>
+		<code>&lt;sw-image replace text="I am replaced with a &amp;lt;svg&amp;gt; element" width="200"&gt;&lt;/sw-image&gt;</code>
+		<br>
+		<sw-image replace text="I am replaced with a &lt;svg&gt; element" width="200"></sw-image>
+	</p>
+	<p>
+		<code>&lt;sw-image replace img text="I am replaced with an &amp;lt;img&amp;gt; element"&gt;&lt;/sw-image&gt;</code>
+		<br>
+		<sw-image replace img text="I am replaced with an &lt;img&gt; element"></sw-image>
 	</p>
 </body>
 

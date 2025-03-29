@@ -27,6 +27,7 @@ Responsive image:
 |-|-|-|
 | `img` | | Output as an `<img>`.  This encodes the SVG as the image's data source. |
 | `fluid` | | Create responsive image that scales to the width of their container. |
+| `replace` | | Replace the `<sw-image>` element with an image. Output can be SVG or `<img>`. |
 | `width` | `100%` | Image width.  Can be a percentage or a unitless pixel value. |
 | `height` | `160` | Image height. Can be a percentage  or a unitless pixel value. |
 | `bg-color` | `#dadef0` | Color of the background. |
